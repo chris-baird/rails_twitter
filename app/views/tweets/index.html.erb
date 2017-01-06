@@ -5,7 +5,13 @@
     <li>
       <strong> <%= tweet.handle %></strong>
       <p> <%= tweet.content %> </p>
+
+      <%= tweet.created_at.localtime.strftime(" %I:%M %P %b, %-d, %Y") %>
+
+      <p> <%= link_to "View", tweet_path(tweet)%></p>
     </li>
   <% end %>
+
+
 
 </ul>

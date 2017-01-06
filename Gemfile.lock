@@ -39,6 +39,9 @@ GEM
     arel (6.0.4)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.2.0.2)
+      sass (~> 3.2)
+    bootstrap_form (2.5.3)
     builder (3.2.2)
     byebug (9.0.6)
     coffee-rails (4.1.1)
@@ -144,6 +147,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass (~> 3.2.0)
+  bootstrap_form
   byebug
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)

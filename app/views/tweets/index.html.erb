@@ -5,21 +5,26 @@
 </ul>
 
 <div class="jumbotron text-center">
-  <h1>Tweets</h1>
+  <h1>Tweet feed</h1>
 </div>
 
-<ul>
+
   <% @tweets.each do |tweet| %>
-    <li>
-      <strong> <%= tweet.handle %></strong>
-      <p> <%= tweet.content %> </p>
-
-      <%= tweet.created_at.localtime.strftime(" %I:%M %P %b, %-d, %Y") %>
-
-      <p> <%= link_to "View", tweet_path(tweet)%></p>
-    </li>
+    <div class="panel panel-default tweet margin">
+      <div class="panel-heading tweet">
+        <h3 class="panel-title tweet"><%= tweet.handle %></h3>
+      </div>
+      <div class="panel-body tweet">
+        <%= tweet.created_at.localtime.strftime(" %I:%M %P %b, %-d, %Y") %>
+        <br>
+        <%= tweet.content %>
+        <p> <%= link_to "View", tweet_path(tweet)%></p>
+      </div>
+    </div>
   <% end %>
 
 
 
-</ul>
+
+
+

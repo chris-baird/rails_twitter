@@ -18,3 +18,18 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+ img {
+  width: 300px;
+  height: 300px;
+ }
+
+ .tweet {
+  width: 500px;
+  margin: 0 auto;
+  font-size: 25px;
+ }
+
+ .margin {
+  margin-top: 20px;
+
+ }

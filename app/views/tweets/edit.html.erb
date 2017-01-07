@@ -1,3 +1,13 @@
+<ul class="nav nav-pills">
+  <li role="presentation"><%= link_to "Home", root_path%></li>
+  <li role="presentation" class="active"><%= link_to "View Tweets", tweets_path%></li>
+  <li role="presentation"><%= link_to "New Tweet", new_tweet_path%></li>
+</ul>
+
+<div class="jumbotron text-center">
+  <h1>WDI Twitter</h1>
+</div>
+
 <h1>Edit Tweet</h1>
 
 <%= form_for @tweet do |f| %>

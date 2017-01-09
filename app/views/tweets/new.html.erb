@@ -9,17 +9,19 @@
 </div>
 
 <%= form_for @tweet do |f| %>
+  <div class="container jumbotron ">
+    <div>
+      <%= f.label :handle, :class => 'form-group' %>
+      <br>
+      <%= f.text_field :handle, :class => 'form-group', :placeholder => "Handle Name:" %>
+    </div>
 
-  <div>
-    <%= f.label :handle %>
-    <%= f.text_field :handle %>
+    <div>
+      <%= f.label :content, :class => 'form-group' %>
+      <br>
+      <%= f.text_field :content, :class => 'form-group form-control', :placeholder => "Comment goes here:"%>
+    </div>
+    <hr>
+    <%= f.submit "submit tweet", :class => 'btn btn-success' %>
   </div>
-
-  <div>
-    <%= f.label :content %>
-    <%= f.text_field :content %>
-  </div>
-  <%= f.submit "submit tweet" %>
 <% end %>
-
-<%= link_to "home", tweets_path%>

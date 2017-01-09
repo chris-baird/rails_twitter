@@ -8,20 +8,20 @@
   <h1>WDI Twitter</h1>
 </div>
 
-<h1>Edit Tweet</h1>
-
 <%= form_for @tweet do |f| %>
+  <div class="container jumbotron ">
+    <div>
+      <%= f.label :handle, :class => 'form-group' %>
+      <br>
+      <%= f.text_field :handle, :class => 'form-group', :placeholder => "Handle Name:" %>
+    </div>
 
-  <div>
-    <%= f.label :handle %>
-    <%= f.text_field :handle %>
+    <div>
+      <%= f.label :content, :class => 'form-group' %>
+      <br>
+      <%= f.text_field :content, :class => 'form-group form-control', :placeholder => "Comment goes here:"%>
+    </div>
+    <hr>
+    <%= f.submit "submit edit", :class => 'btn btn-success' %>
   </div>
-
-  <div>
-    <%= f.label :content %>
-    <%= f.text_field :content %>
-  </div>
-  <%= f.submit "submit Edit" %>
 <% end %>
-
-<%= link_to "home", tweets_path%>

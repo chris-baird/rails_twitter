@@ -10,19 +10,19 @@
 
 
   <% @tweets.each do |tweet| %>
-    <div class="panel panel-default tweet margin">
-      <div class="panel-heading tweet">
-        <h3 class="panel-title tweet"><%= tweet.handle %></h3>
+    <div class="panel panel-default">
+      <div class="panel-heading pheading">
+        <h3 class="panel-title tweet pull-left"><%= tweet.handle %></h3>
+        <h3 class="panel-title tweet pull-right"><%= tweet.created_at.localtime.strftime(" %I:%M %P %b, %-d, %Y") %></h3>
       </div>
-      <div class="panel-body tweet">
-        <%= tweet.created_at.localtime.strftime(" %I:%M %P %b, %-d, %Y") %>
-        <br>
+      <div class="panel-body">
         <%= tweet.content %>
-        <p> <%= link_to "View", tweet_path(tweet)%></p>
+        <br>
+        <hr>
+        <p> <%= link_to "View", tweet_path(tweet), :class => "btn btn-default"%></p>
       </div>
     </div>
   <% end %>
-
 
 
 
